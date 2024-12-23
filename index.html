@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mytalorzone By Sahiba</title>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="./styles/demo.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo" style="font-family: Arial, sans-serif; font-size: 24px; font-weight: bold;">
+                Mytalorzone <sub style="font-size: 14px; font-weight: normal; vertical-align: baseline; opacity: 0.8; color: gray;">By Sahiba</sub>
+              </div>
+              
+            <nav>
+                
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <div class="collection-toggle">
+                    <span class="arrow down">Collections</span>
+                    <div class="collection-popup"></div>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="collection-items">
+                    <!-- Collection items will be dynamically added here -->
+                  </div>
+                  <a href="#cart">Cart</a>
+                  
+                  
+                <a href="mailto:aref@example.com?subject=Your%20Subject&body=Hello%20Aref,%0A%0AThis%20is%20your%20message.">Contact</a>
+                <div class="form-input">
+                    <input type="search" placeholder="Search...">
+                    <button type="submit" class="search-btn"> <i class='bx bx-search' ></i></button>
+                </div>
+                <label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="notification">
+				<i class='bx bxs-bell' onclick="popup(`popup-not`)"></i>
+			</a>
+			<a href="#" class="profile">
+				<i class='bx bx-user' onclick="popup(`popup-acc`)"></i>
+			</a>
+            </nav>
+            
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#collections">Collections</a>
+            <a href="#contact">Contact</a>
+            <a href="#" class="notification">
+				<i class='bx bxs-bell' onclick="popup(`popup-not`)"></i>
+			</a>
+			<a href="#" class="profile">
+				<i class='bx bx-user' onclick="popup(`popup-acc`)"></i>
+			</a>
+        </div>
+    </header>
+
+    
+    <section class="about-section" id="abou">
+        <h1>Celebrate the Festive Season with Mytalorzone By Sahiba</h1>
+        <p>
+            Mytalorzone By Sahiba is here to make your festive season special with a collection that blends creativity, tradition, and modern flair. 
+            From vibrant ethnic wear to chic western styles, our festive collection has something perfect for every celebration and style. 
+            This season, embrace the spirit of the holidays with unique, versatile outfits that will make you shine at every gathering. 
+            Whether it’s Diwali, Christmas, or New Year’s, Mytalorzone brings you fashion that’s as lively and joyous as the season itself.
+        </p>
+    </section>
+    <div class="products"></div>
+                  <ul class="shopping-cart-list" id="cart"></ul>
+                  <div id="cart">
+                    <button class="empty-cart-btn">
+                        Empty Cart</button>
+                    <button class="cart-checkout">Checkout</button>
+                    <span class="total-price"></span>
+                  </div>
+                  <ul class="submenu-list"></ul>
+          
+                  <div class="total-price"></div>
+                  
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <h1>About Mytalorzone By Sahiba</h1>
+        <p>
+            Mytalorzone By Sahiba is a vibrant clothing brand dedicated to providing creative, unique, and diverse apparel for girls. 
+            The collection includes a mix of traditional, western, and trendy styles, ensuring options for every occasion and taste. 
+            Mytalorzone prides itself on bringing fashion that blends innovation and versatility to empower girls through their wardrobe choices.
+        </p>
+    </section>
+            <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Social Links -->
+                    <div class="footer-section">
+                        <h4>Social</h4>
+                        
+                           <div class="so_ul">
+                            <i class="bx bxl-facebook bx-lg"></i> 
+                            <i class="bx bxl-whatsapp bx-lg"></i> 
+                            <i class="bx bxl-youtube bx-lg"></i>
+                            <i class="bx bxl-instagram bx-lg"></i> 
+                           </div>
+                        
+                    </div>
+        
+                    <!-- Contact Links -->
+                    <div class="footer-section">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="/contact-us">Contact Us</a></li>
+                            <li><a href="tel:+917314691977">Call: +91-7314691977</a></li>
+                            <li><a href="https://wa.me/+917399009933">WhatsApp: +917399009933</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Additional Sections (About, Customer Care, etc.) -->
+                    <div class="footer-section">
+                        <h4>About</h4>
+                        <ul>
+                            <li><a href="/contact-us">Support Center</a></li>
+                            <li><a href="/contact-us">Customer Support</a></li>
+                            <li><a href="/contact-us">About Us</a></li>
+                            <li><a href="/blogs">Blogs</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Customer Care -->
+                    <div class="footer-section">
+                        <h4>Customer Care</h4>
+                        <ul>
+                            <li><a href="/">FAQ & Helps</a></li>
+                            <li><a href="/">Shipping & Delivery</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Our Information -->
+                    <div class="footer-section">
+                        <h4>Our Information</h4>
+                        <ul>
+                            <li><a href="/privacy">Policy Privacy</a></li>
+                            <li><a href="/terms">Terms & Conditions</a></li>
+                            <li><a href="/refund-policy">Refund & Cancellation Policy</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Top Categories -->
+                    <div class="footer-section">
+                        <h4>Top Categories</h4>
+                        <ul>
+                            <li><a href="/category/clothing-and-accessories?catid=6061ed9c507dc9b848a46804">Clothing and Accessories</a></li>
+                            <li><a href="/category/personalised-gifts?catid=6061ed57507dc9b848a46803">Personalised Gifts</a></li>
+                            <li><a href="/category/scrunchies?catid=6127594ac2ad1bb7e979181e">Scrunchies</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Bottom Footer -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <p>Copyright © 2024 <a href="www.google.com">About Mytalorzone By Sahiba</h1></a> All rights reserved</p>
+                    <ul>
+                        <li><a href="/" target="_blank" rel="noreferrer"><img src="https://logodownload.org/wp-content/uploads/2014/07/mastercard-logo.png" alt="Master Card"></a></li>
+                        <li><a href="/" target="_blank" rel="noreferrer"><img src="https://logos-world.net/wp-content/uploads/2020/05/Visa-Logo.png" alt="Visa"></a></li>
+                        <li><a href="/" target="_blank" rel="noreferrer"><img src="https://logos-download.com/wp-content/uploads/2016/03/PayPal_Logo_2007.png" alt="Paypal"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+                
+                
+                
+    <script>
+        function toggleMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('show');
+        }
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script>
+        var ShoppingCart = (function ($) {
+            "use strict";
+          
+            // Cache necessary DOM Elements
+            var productsEl = document.querySelector(".products"),
+                cartEl = document.querySelector(".shopping-cart-list"),
+                totalPriceEl = document.querySelector(".total-price"),
+                emptyCartEl = document.querySelector(".empty-cart-btn"),
+                collectionToggleEl = document.querySelector(".collection-toggle"),
+                submenuEl = document.querySelector(".submenu-list"),
+                collectionPopupEl = document.querySelector(".collection-popup"),
+                overlayEl = document.querySelector(".overlay");
+          
+            var products = [
+              {
+                id: 0,
+                name: "T-Shirt - Basic White",
+                description: "A comfortable and stylish basic white t-shirt, perfect for casual wear.",
+                imageUrl: "https://www.qualitylogoproducts.com/custom-tshirts/gildan-dryblend-t-shirt-white-hq.jpg?size=details",
+                price: 19.99,
+              },
+              {
+                id: 1,
+                name: "Jeans - Slim Fit",
+                description: "Slim-fit jeans made from premium denim, providing a sleek and modern look.",
+                imageUrl: "https://th.bing.com/th/id/OIP.xmOlwXgxnb1ofXpBK6TCxwHaLW?w=201&h=309&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+                price: 49.99,
+              },
+              {
+                id: 2,
+                name: "Leather Jacket",
+                description: "A classic leather jacket with a timeless design, perfect for all seasons.",
+                imageUrl: "https://www.jacketsexpert.com/wp-content/uploads/2021/02/mens-sherpa-collar-brown-leather-jacket.jpg",
+                price: 129.99,
+              },
+              {
+                id: 3,
+                name: "Hoodie - Grey",
+                description: "A cozy grey hoodie with a soft fleece lining, perfect for colder weather.",
+                imageUrl: "https://cdna.lystit.com/photos/matchesfashion/1156494-GREY-caab323d-.jpeg",
+                price: 39.99,
+              },
+              {
+                id: 4,
+                name: "Sneakers - White",
+                description: "Comfortable white sneakers with a clean design, suitable for all occasions.",
+                imageUrl: "https://fashionweekdaily.com/wp-content/uploads/2020/08/lead_whitesneaker-1170x780.jpg",
+                price: 69.99,
+              },
+              {
+                id: 5,
+                name: "Sweatpants - Black",
+                description: "Soft and comfortable black sweatpants, great for lounging or workouts.",
+                imageUrl: "https://th.bing.com/th/id/OIP.sjjPaEaBTx9JYvmV_Ln6qAHaKq?w=208&h=299&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+                price: 29.99,
+              },
+              {
+                id: 1,
+                name: "Jeans - Slim Fit",
+                description: "Slim-fit jeans made from premium denim, providing a sleek and modern look.",
+                imageUrl: "https://th.bing.com/th/id/OIP.xmOlwXgxnb1ofXpBK6TCxwHaLW?w=201&h=309&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+                price: 49.99,
+              },
+              {
+                id: 2,
+                name: "Leather Jacket",
+                description: "A classic leather jacket with a timeless design, perfect for all seasons.",
+                imageUrl: "https://www.jacketsexpert.com/wp-content/uploads/2021/02/mens-sherpa-collar-brown-leather-jacket.jpg",
+                price: 129.99,
+              },
+            ];
+          
+            var collections = ["Men's Wear", "Women's Wear", "Accessories", "Footwear", "Sale"];
+            var productsInCart = [];
+          
+            // Generate product list HTML
+            var generateProductList = function () {
+              products.forEach(function (item) {
+                var productEl = document.createElement("div");
+                productEl.className = "product";
+                productEl.innerHTML = `<div class="product-image">
+                                          <img src="${item.imageUrl}" alt="${item.name}">
+                                       </div>
+                                       <div class="product-name"><span>Product:</span> ${item.name}</div>
+                                       <div class="product-description"><span>Description:</span> ${item.description}</div>
+                                       <div class="product-price"><span>Price:</span> $${item.price}</div>
+                                       <div class="product-add-to-cart">
+                                         <a href="#0" class="button see-more">More Details</a>
+                                         <a href="#0" class="button add-to-cart" data-id=${item.id}>Add to Cart</a>
+                                       </div>`;
+                productsEl.appendChild(productEl);
+              });
+            };
+          
+            // Generate collections HTML
+            var generateCollections = function () {
+              collections.forEach(function (collection) {
+                var collectionEl = document.createElement("div");
+                collectionEl.className = "collection-item";
+                collectionEl.innerHTML = `<a href="#0">${collection}</a>`;
+                collectionPopupEl.appendChild(collectionEl);
+              });
+            };
+          
+            // Toggle collection submenu
+            var togglePopup = function (event) {
+              event.stopPropagation();
+              if (collectionPopupEl.style.display === "block") {
+                closePopup();
+              } else {
+                openPopup();
+              }
+            };
+          
+            // Open the popup
+            var openPopup = function () {
+              collectionPopupEl.style.display = "block";
+              overlayEl.style.display = "block";
+              updateArrow(true);
+            };
+          
+            // Close the popup
+            var closePopup = function () {
+              collectionPopupEl.style.display = "none";
+              overlayEl.style.display = "none";
+              updateArrow(false);
+            };
+          
+            // Update arrow direction
+            var updateArrow = function (isOpen) {
+              var arrowEl = collectionToggleEl.querySelector(".arrow");
+              arrowEl.classList.toggle("down", !isOpen);
+              arrowEl.classList.toggle("up", isOpen);
+            };
+          
+            // Close popup on overlay click or outside click
+            var setupCloseListeners = function () {
+              document.addEventListener("click", closePopup);
+              overlayEl.addEventListener("click", closePopup);
+              collectionPopupEl.addEventListener("click", function (event) {
+                event.stopPropagation(); // Prevent closing when clicking inside popup
+              });
+            };
+          
+            // Update the cart display
+            var updateCartDisplay = function () {
+              var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+              cartEl.innerHTML = ""; // Clear existing cart
+              var totalPrice = 0;
+          
+              cartItems.forEach(function (item) {
+                var cartItemEl = document.createElement("div");
+                cartItemEl.className = "cart-item";
+                cartItemEl.innerHTML = `
+                  <div class="cart-item-name">${item.name}</div>
+                  <div class="cart-item-price">$${item.price}</div>
+                `;
+                cartEl.appendChild(cartItemEl);
+                totalPrice += item.price;
+              });
+          
+              totalPriceEl.textContent = `Total Price: $${totalPrice.toFixed(2)}`;
+            };
+          
+            // Add product to cart
+            var addToCart = function (productId) {
+              var product = products.find(function (item) {
+                return item.id === productId;
+              });
+              var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+              cartItems.push(product);
+              localStorage.setItem("cart", JSON.stringify(cartItems));
+              updateCartDisplay();
+            };
+          
+            // Attach event listener to the Add to Cart buttons
+            var setupAddToCartListeners = function () {
+              var addToCartBtns = document.querySelectorAll(".add-to-cart");
+              addToCartBtns.forEach(function (btn) {
+                btn.addEventListener("click", function (e) {
+                  e.preventDefault();
+                  var productId = parseInt(btn.getAttribute("data-id"));
+                  addToCart(productId);
+                });
+              });
+            };
+          
+            // Empty cart functionality
+            var setupEmptyCartListener = function () {
+              emptyCartEl.addEventListener("click", function () {
+                localStorage.removeItem("cart");
+                updateCartDisplay();
+              });
+            };
+          
+            // Initialize the app
+            var init = function () {
+              generateProductList();
+              generateCollections();
+              setupCloseListeners();
+              setupAddToCartListeners();
+              setupEmptyCartListener();
+          
+              // Attach submenu toggle listener
+              collectionToggleEl.addEventListener("click", togglePopup);
+            };
+          
+            return {
+              init: init,
+            };
+          })(jQuery);
+          
+          ShoppingCart.init();
+          
+    </script>
+</body>
+</html>
